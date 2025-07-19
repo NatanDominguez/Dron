@@ -42,8 +42,10 @@
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN PV */
+uint8_t phase = 0;
 
 /* USER CODE END PV */
 
@@ -52,8 +54,9 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM2_Init(void);
+static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
-
+void open_loop(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -92,8 +95,12 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM1_Init();
   MX_TIM2_Init();
+  MX_TIM3_Init();
+
   /* USER CODE BEGIN 2 */
 
+  // START TIMER
+  HAL_TIM_Base_Start_IT(&htim3);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -313,6 +320,58 @@ static void MX_TIM2_Init(void)
 }
 
 /**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM3_Init(void)
+{
+
+  /* USER CODE BEGIN TIM3_Init 0 */
+
+  /* USER CODE END TIM3_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_SlaveConfigTypeDef sSlaveConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 16;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 1000;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sSlaveConfig.SlaveMode = TIM_SLAVEMODE_DISABLE;
+  sSlaveConfig.InputTrigger = TIM_TS_ITR2;
+  if (HAL_TIM_SlaveConfigSynchro(&htim3, &sSlaveConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -362,7 +421,75 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+void open_loop(void){
+    /*
+        FUNCIÓ PEL CONTROL OPEN LOOP
 
+        EN FUNCIÓ DE LA FASE ELÈCTRICA ES MODIFIQUEN LES ENTRADES DELS PONTS H
+
+        EN CADA SALT ENTRE FASES HI HA NOMÉS DOS CANVIS I S'ALTERNEN ENTRE PART ALTA I BAIXA DELS PONTS
+
+            PHASE 1: PWMA -> ON; PWMC -> OFF
+            PHASE 2: LC -> ON; LB -> OFF
+            PHASE 3: PWMB -> ON; PWMA -> OFF
+            PHASE 4: LC -> OFF; LA -> ON
+            PHASE 5: PWMC -> ON; PWMB -> OFF
+            PHASE 6: LA -> OFF; LB -> ON
+
+        _______________________________________
+            HA: --------________________
+            LA: ____________--------____
+
+            HB: ________--------________
+            LB: ----________________----
+
+            HC: ________________--------
+            LC: ____--------____________
+        _______________________________________
+
+
+    */
+
+    if(phase > 6)   phase = 1; // ENSURE PERIODICITY
+
+    //LÒGICA PER L'EXCITACIÓ DEL MOTOR
+
+    if(phase == 1){         // PWMA -> ON; PWMC -> OFF
+    	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1); 				// PWMA ON
+    	HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_3);  				// PWMC OFF
+    }
+    else if(phase == 2){    // BL -> OFF; CL -> ON
+    	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);   	// CL ON
+    	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET); 	// BL OFF
+    }
+    else if(phase == 3){    // PWMA -> OFF; PWMB -> ON
+    	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);  				// PWMB ON
+    	HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1); 				// PWMA OFF
+    }
+    else if(phase == 4){    // AL -> ON; CL -> OFF
+    	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET); 	// AL ON
+    	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_RESET);	// CL OFF
+    }
+    else if(phase == 5){    // PWMB -> OFF; PWMC -> ON
+    	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);  				// PWMC ON
+    	HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2); 				// PWMB OFF
+    }
+    else{   //phase = 6 ||     AL -> OFF; BL -> ON
+    	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);		// BL ON
+    	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_RESET);	// AL OFF
+    }
+}
+
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+
+	if (htim->Instance == TIM3){	//RAMPA
+
+
+		phase = (phase + 1) % 6;	// LOOP INCREMENT
+		open_loop();
+    }
+}
 
 /* USER CODE END 4 */
 
