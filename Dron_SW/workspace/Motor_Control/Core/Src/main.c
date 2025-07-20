@@ -65,7 +65,7 @@ uint32_t pulse_width_delta;
 uint32_t timer_ticks_delta;
 
 uint16_t rampup_iterations;
-uint16_t current_iteration = 1;
+uint16_t current_iteration = 0;
 
 uint8_t rampup_time = 5;      // ramp-up time in seconds, approximating by a linear rampup
 
@@ -97,14 +97,15 @@ void open_loop(void);
   * @brief  The application entry point.
   * @retval int
   */
-int main(void){
+int main(void)
+{
 
   /* USER CODE BEGIN 1 */
 
 
-	// x10 as fPWM = 1kHz -> pulse_width = duty*1000 with duty in range [0,1]
+
 	// x1000 to increment sensibility
-  pulse_width = duty_initial * 10 * 1000;
+  pulse_width = duty_initial * 10 * 1000;	// x10 as fPWM = 1kHz -> pulse_width = duty*1000 with duty in range [0,1]
   pulse_width_final = duty_final * 10 * 1000;
   
   timer_ticks = period_initial * 1000;
@@ -112,6 +113,7 @@ int main(void){
 
   rampup_iterations = (rampup_time * 1000000) / timer_ticks;
 
+	// x10 to increment sensibility
   timer_ticks *= 10;
   timer_ticks_final *= 10;
 
@@ -164,18 +166,21 @@ int main(void){
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+  while (1){
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
 
-    if(!ramp){  // CLOSED LOOP STATE
+    if(ramp){                 // OPEN LOOP STATE
 
     }
-    else{       // OPEN LOOP STATE
+    else if(transition){      // TRANSITION STATE
 
     }
+    else{                     // CLOSED LOOP STATE
+
+    }
+    
   }
   /* USER CODE END 3 */
 }
@@ -242,9 +247,9 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 15;
+  htim1.Init.Prescaler = 16;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 1000;
+  htim1.Init.Period = 100;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -337,9 +342,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 15;
+  htim2.Init.Prescaler = 16;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 1000;
+  htim2.Init.Period = 100;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -405,9 +410,9 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 15;
+  htim3.Init.Prescaler = 16;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = timer_ticks;
+  htim3.Init.Period = 65535;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -476,9 +481,13 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : PB11 PB12 PB13 */
   GPIO_InitStruct.Pin = GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_DisableIRQ(EXTI15_10_IRQn);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
@@ -546,6 +555,108 @@ void open_loop(void){
 }
 
 
+void closed_loop(void){
+/*
+
+        FUNCIÓ PEL CONTROL CLOSED LOOP
+
+        S'APLICA LA MATEIXA LÒGICA QUE EL CONTROL OPEN LOOP, AMB LA DIFERÈNCIA
+        QUE EL SALT ENTRE FASES VE DONAT PER LA DETECCIÓ DEL PAS PER ZERO DEL BEMF
+
+        QUAN UNA DE LES FASES ESTA FLOTANT TÉ LLOC EL PAS PER ZERO, CAL
+        ACTIVAR LA INTERRUPCIÓ RESPECTIVA PER A DETECTAR-LA
+
+            PHASE 1: DETECT C FALLING - (PWMA -> ON; PWMC -> OFF)
+            PHASE 2: DETECT B RISING - (LC -> ON; LB -> OFF)
+            PHASE 3: DETECT A FALLING - (PWMB -> ON; PWMA -> OFF)
+            PHASE 4: DETECT C RISING - (LC -> OFF; LA -> ON)
+            PHASE 5: DETECT B FALLING - (PWMC -> ON; PWMB -> OFF)
+            PHASE 6: DETECT A RISING - (LA -> OFF; LB -> ON)
+
+        _______________________________________
+            HA: --------_|____________|_
+            LA: __________|_--------_|__
+
+            HB: ______|_--------_|______
+            LB: ----_|____________|_----
+
+            HC: _|____________|_--------
+            LC: __|_--------_|__________
+        _______________________________________
+
+*/
+
+  // INITIAL RESET
+
+  HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);  				// PWMA OFF
+  HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);  				// PWMA OFF
+  HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_3);  				// PWMA OFF
+
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6 | GPIO_PIN_7 | GPIO_PIN_8, GPIO_PIN_RESET);  // LA, LB, LC OFF
+
+  if(phase > 6)   phase = 1; // ENSURE PERIODICITY
+
+  if(phase == 1){         // READ PHASE C FALLING
+      // PZC -> FALLING
+
+      EXTI->IMR1 |= GPIO_PIN_13;                                      // ENABLE INT C
+
+      HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);                       // HA
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);              // LB
+  }
+
+  else if(phase == 2){    // READ PHASE B RISING
+      // PZB -> RISING
+
+      EXTI->IMR1 |= GPIO_PIN_12;                                      // ENABLE INT B
+
+      HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);                       // HA
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);              // LC
+  }
+
+  else if(phase == 3){    // READ PHASE A FALLING
+      // PZA -> FALLING
+
+      EXTI->IMR1 |= GPIO_PIN_11;                                      // ENABLE INT A
+
+      HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);                       // HB
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);              // LC
+
+  }
+
+  else if(phase == 4){    // READ PHASE C RISING
+      // PZC -> RISING
+
+      EXTI->IMR1 |= GPIO_PIN_13;                                      // ENABLE INT C
+
+      HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);                       // HB        
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);              // LA
+
+
+  }
+
+  else if(phase == 5){    // READ PHASE B FALLING
+      // PE4 -> FALLING
+
+      EXTI->IMR1 |= GPIO_PIN_12;                                      // ENABLE INT B
+
+      HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);                       // HC
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);              // LA
+
+  }
+  else{                   // READ PHASE A RISING
+      // PB1 -> RISING
+
+      EXTI->IMR1 |= GPIO_PIN_11;                                      // ENABLE INT A
+
+      HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);                       // HC
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET);              // LB
+
+  }
+
+}
+
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
 	if (htim->Instance == TIM3){	//RAMPA
@@ -562,7 +673,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
       current_iteration++;
 
-      if(current_iteration > rampup_iterations){
+      if(current_iteration >= rampup_iterations){
         ramp = 0;
         transition = 1;
         current_iteration = 0;
@@ -573,19 +684,51 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
     else if(transition){  // TRANSITIONING TO CLOSED LOOP
 
       current_iteration++;
-      if(current_iteration > transition_iterations){
+      if(current_iteration >= transition_iterations){
     	  transition = 0;
       }
 
     }
 
     else{   // ENTERING CLOSED LOOP
-    }
-
-		phase = (phase % 6) + 1;	// LOOP INCREMENT
-		open_loop();
+    	  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+    	  HAL_NVIC_DisableIRQ(TIM3_IRQn);
 
     }
+
+	phase = (phase % 6) + 1;	// LOOP INCREMENT
+	open_loop();
+
+    }
+}
+
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    if (GPIO_Pin == GPIO_PIN_11){
+
+      EXTI->IMR1 &= ~GPIO_PIN_11; // DISABLE A INTERRUPTS
+
+      if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_11) == GPIO_PIN_SET)  phase = 1;  // A RISING
+      else  phase = 4; // A FALLING
+
+    }
+    else if(GPIO_Pin == GPIO_PIN_12){
+
+      EXTI->IMR1 &= ~GPIO_PIN_12; // DISABLE B INTERRUPTS
+
+      if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_12) == GPIO_PIN_SET)  phase = 3;  // B RISING
+      else  phase = 6; // B FALLING
+
+    }
+    else if(GPIO_Pin == GPIO_PIN_13){
+      EXTI->IMR1 &= ~GPIO_PIN_13; // DISABLE C INTERRUPTS
+
+      if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_SET)  phase = 5;  // C RISING
+      else  phase = 2; // C FALLING
+    }
+
+    closed_loop();
 }
 
 /* USER CODE END 4 */
