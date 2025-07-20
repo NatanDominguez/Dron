@@ -45,7 +45,36 @@ TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN PV */
+
 uint8_t phase = 0;
+uint8_t ramp = 1;
+
+// RAMP UP VARIABLES
+
+uint32_t pulse_width;          // PWM pulse width
+uint32_t timer_ticks;          // Open Loop Timer controller ticks
+
+uint8_t duty_initial = 22;    // initial duty
+uint8_t duty_final = 15;      // final duty
+uint8_t period_initial = 4;   // initial electrical phase period in ms
+uint8_t period_final = 1;     // final electrical phase period in ms
+
+uint32_t pulse_width_final;
+uint32_t timer_ticks_final;
+uint32_t pulse_width_delta;
+uint32_t timer_ticks_delta;
+
+uint16_t rampup_iterations;
+uint16_t current_iteration = 1;
+
+uint8_t rampup_time = 5;      // ramp-up time in seconds, approximating by a linear rampup
+
+
+// TRANSITION VARIABLES
+
+uint8_t transition = 0;
+uint16_t transition_iterations;
+uint8_t transition_time = 1;  // transition to closed-loop time
 
 /* USER CODE END PV */
 
@@ -68,10 +97,28 @@ void open_loop(void);
   * @brief  The application entry point.
   * @retval int
   */
-int main(void)
-{
+int main(void){
 
   /* USER CODE BEGIN 1 */
+
+
+	// x10 as fPWM = 1kHz -> pulse_width = duty*1000 with duty in range [0,1]
+	// x1000 to increment sensibility
+  pulse_width = duty_initial * 10 * 1000;
+  pulse_width_final = duty_final * 10 * 1000;
+  
+  timer_ticks = period_initial * 1000;
+  timer_ticks_final = period_final * 1000;
+
+  rampup_iterations = (rampup_time * 1000000) / timer_ticks;
+
+  timer_ticks *= 10;
+  timer_ticks_final *= 10;
+
+  pulse_width_delta = (pulse_width - pulse_width_final) / rampup_iterations;
+  timer_ticks_delta = (timer_ticks - timer_ticks_final) / rampup_iterations;
+
+  transition_iterations = 1000*transition_time/period_final;
 
   /* USER CODE END 1 */
 
@@ -96,11 +143,23 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
-
   /* USER CODE BEGIN 2 */
 
   // START TIMER
   HAL_TIM_Base_Start_IT(&htim3);
+
+
+  // INICIAL STATE
+
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_RESET); 	// AL INICIAL STATE OFF
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_SET); 	  // BL INICIAL STATE ON
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_RESET); 	// CL INICIAL STATE OFF
+
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1); 				      // PWMA ON
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);               // PWMB OFF
+    HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_3);  				      // PWMC OFF
+
+    ramp = 1;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -110,6 +169,13 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+    if(!ramp){  // CLOSED LOOP STATE
+
+    }
+    else{       // OPEN LOOP STATE
+
+    }
   }
   /* USER CODE END 3 */
 }
@@ -176,9 +242,9 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 16;
+  htim1.Init.Prescaler = 15;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 100;
+  htim1.Init.Period = 1000;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -271,9 +337,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 16;
+  htim2.Init.Prescaler = 15;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 100;
+  htim2.Init.Period = 1000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -339,9 +405,9 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 16;
+  htim3.Init.Prescaler = 15;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 1000;
+  htim3.Init.Period = timer_ticks;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
@@ -447,7 +513,6 @@ void open_loop(void){
             LC: ____--------____________
         _______________________________________
 
-
     */
 
     if(phase > 6)   phase = 1; // ENSURE PERIODICITY
@@ -485,9 +550,41 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
 	if (htim->Instance == TIM3){	//RAMPA
 
+    if(ramp){   // RAMPUP
 
-		phase = (phase + 1) % 6;	// LOOP INCREMENT
+      pulse_width -= pulse_width_delta;
+      timer_ticks -= timer_ticks_delta;
+
+      __HAL_TIM_SET_AUTORELOAD(&htim3, timer_ticks/10);
+      __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, pulse_width/1000);
+      __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, pulse_width/1000);
+      __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, pulse_width/1000);
+
+      current_iteration++;
+
+      if(current_iteration > rampup_iterations){
+        ramp = 0;
+        transition = 1;
+        current_iteration = 0;
+      }
+
+    }
+
+    else if(transition){  // TRANSITIONING TO CLOSED LOOP
+
+      current_iteration++;
+      if(current_iteration > transition_iterations){
+    	  transition = 0;
+      }
+
+    }
+
+    else{   // ENTERING CLOSED LOOP
+    }
+
+		phase = (phase % 6) + 1;	// LOOP INCREMENT
 		open_loop();
+
     }
 }
 
