@@ -14,10 +14,12 @@ module signal_gen #(
     ) (
     input logic clk_i,
     input logic rst_ni,
-    input logic duty_i,
+    input logic [7:0] duty_i,
     input logic [5:0] status_i,
     output logic [5:0] signals_o
 );
+
+    logic pwm_ha,pwm_hb,pwm_hc;
 
     // H-BRIDGE LOWSIDE SIGNALS     ((PULSE))
 
@@ -37,6 +39,7 @@ module signal_gen #(
         .clk_i  (clk_i),
         .rst_ni (rst_ni),
         .duty_i (duty_i),
+        .ena_i  (status_i[5]),
         .pwm_o  (pwm_ha)
     );
 
@@ -44,6 +47,7 @@ module signal_gen #(
         .clk_i  (clk_i),
         .rst_ni (rst_ni),
         .duty_i (duty_i),
+        .ena_i  (status_i[3]),
         .pwm_o  (pwm_hb)
     );
 
@@ -51,6 +55,7 @@ module signal_gen #(
         .clk_i  (clk_i),
         .rst_ni (rst_ni),
         .duty_i (duty_i),
+        .ena_i  (status_i[1]),
         .pwm_o  (pwm_hc)
     );
 

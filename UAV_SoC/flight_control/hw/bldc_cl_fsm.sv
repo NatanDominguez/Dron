@@ -27,12 +27,12 @@ EACH BITS CORRESPOND TO A PORT -> HA : (0 -> low, 1 -> high/pwm)
 */
 
 
-module bldc_ol_fsm (
+module bldc_cl_fsm (
     input logic clk_i,
     input logic rst_ni,
     input logic ena_i,
 
-    input logic [2:0] zero_crossing_i,
+    input logic [2:0] zero_crossing_i, // A [2] / B[1] / C[0]
 
     output logic [5:0] status_o  // 6'b_AHS-ALS-BHS-BLS-CHS-CLS
 );
@@ -44,28 +44,53 @@ module bldc_ol_fsm (
                         P_4 = 3'b100,
                         P_5 = 3'b101,
                         P_6 = 3'b110;
+
+
+
     
     logic [2:0] phase, next;
+    logic [2:0] zero_crossing_prev;
+    logic [2:0] edge_rise_detect; //RISE DETECTION ZERO CROSS      _________-----------
+    logic [2:0] edge_falling_detect; //FALLING DETECTION ZERO CROSS ---------___________
 
-    always_ff @(posedge clk_i) begin
-        if(!rst_ni)     phase <= IDLE;
-        else            phase <= next;   
+    always_ff @(posedge clk_i) begin 
+        if(!rst_ni) begin
+            phase <= IDLE;
+        end else begin
+            phase <= next;
+        end  
     end
+
+
+    always_ff @(posedge clk_i) begin  //edge detectation UP/DOWN
+        if (!rst_ni) begin
+            zero_crossing_prev <= '0;
+            edge_rise_detect    <= '0;
+            edge_falling_detect <= '0;
+        end else begin
+                edge_rise_detect <= ~zero_crossing_prev & zero_crossing_i;
+                edge_falling_detect <= zero_crossing_prev & ~zero_crossing_i;
+                zero_crossing_prev <= zero_crossing_i;
+            end
+            
+        end
+
+
 
     always_comb begin
         case(phase)
-            IDLE:       next = P_1;
-            P_1:        next = P_2;
-            P_2:        next = P_3;
-            P_3:        next = P_4;
-            P_4:        next = P_5;
-            P_5:        next = P_6;
-            P_6:        next = P_1;
+            IDLE: next = P_1;
+            P_1: if (edge_falling_detect[0]) next = P_2;
+            P_2: if (edge_rise_detect[1]) next = P_3;
+            P_3: if (edge_falling_detect[2]) next = P_4;
+            P_4: if (edge_rise_detect[0]) next = P_5;
+            P_5: if (edge_falling_detect[1]) next = P_6;
+            P_6: if (edge_rise_detect[2]) next = P_1;
         endcase
     end
 
     always_ff @(posedge clk_i) begin
-        if(rst_ni) begin
+        if(!rst_ni) begin
                         status_o <= '0;
         end else begin
 
