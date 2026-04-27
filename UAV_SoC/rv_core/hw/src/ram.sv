@@ -2,7 +2,7 @@
 module ram #(
     parameter DATA_SIZE = 32,
     parameter DEPTH = 512,
-    parameter ADDR_SIZE = $clog2(DEPTH)
+    parameter ADDR_SIZE = 32
 ) (
     input clk_i,
     input rst_ni,

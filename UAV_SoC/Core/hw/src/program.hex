@@ -1,7 +1,0 @@
-01000513 // 0x00: x10 = 16
-008000EF // 0x04: jal x1, 8 (Salto a 0x0C)
-06300513 // 0x08: x10 = 99 (Instrucción "trampa")
-00052103 // 0x0C: lw  x2, 0(x10) <- PUNTO DE RETORNO
-00110113 // 0x10: addi x2, x2, 1
-00252023 // 0x14: sw  x2, 0(x10)
-FF5FF06F // jal x0, -12

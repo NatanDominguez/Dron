@@ -1,4 +1,7 @@
 
+// UNSIGNED LESS THAN NOT SUPPORTED (?)
+
+import core_pkg::*;
 
 module alu #(
     parameter int DATA_SIZE = 32,
@@ -9,7 +12,7 @@ module alu #(
     input logic [DATA_SIZE-1:0] a_i,
     input logic [DATA_SIZE-1:0] b_i,
 
-    input logic [SIZE_OP-1:0] op_i,
+    input op_enum op_i,
 
     output logic [DATA_SIZE-1:0] out_o,
     output logic carry_o,
@@ -19,39 +22,18 @@ module alu #(
 
     );
 
-
-    typedef enum logic [SIZE_OP-1:0] {
-        ADD = 0,
-        SUB = 1,
-
-        AND = 2,
-        OR  = 3,
-        XOR = 4,
-
-        SLL = 5,
-        SRL = 6,
-        SRA = 7,
-
-        SLT = 8
-
-    } op_t;
-
-    op_t op;
-
     reg [DATA_SIZE:0] result;
 
     assign out_o = result[DATA_SIZE-1:0];
     assign carry_o = result[DATA_SIZE];
     assign zero_o = ~(|result);
 
-    assign op = op_t'(op_i);
-
     always_comb begin
         
         lt_o = 1'b0;
         result = '0;
 
-        case(op)
+        case(op_i)
             ADD:    result = a_i + b_i;
             SUB:    result = a_i - b_i;
 

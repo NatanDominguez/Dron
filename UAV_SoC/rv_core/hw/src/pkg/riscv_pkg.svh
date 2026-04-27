@@ -8,7 +8,9 @@ package riscv_pkg;
         S_TYPE      = 7'b0100011,
         B_TYPE      = 7'b1100011,
         J_TYPE      = 7'b1101111,
-        U_TYPE      = 7'b0110111
+        LUI         = 7'b0110111,
+        AUIPC       = 7'b0010111,
+        JALR        = 7'b1100111
     } opcode_enum;
 
     typedef enum logic [2:0] {

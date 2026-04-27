@@ -1,0 +1,23 @@
+0FC00113 // 0x00: li sp, 252           
+010000EF // 0x04: jal ra, 16           (Hacia 0x14)
+06400A13 // 0x08: li x20, 100          
+05454463 // 0x0C: blt x10, x20, 72     (FIXED: Comparando x10 con x20)
+0000006F // 0x10: j 0                  
+FF810113 // 0x14: addi sp, sp, -8      
+00112223 // 0x18: sw ra, 4(sp)         
+00000A93 // 0x1C: li x21, 0            
+00000B13 // 0x20: li x22, 0            
+028000EF // 0x24: jal ra, 40           (Hacia 0x4C)
+00AA8AB3 // 0x28: add x21, x21, x10    
+001B0B13 // 0x2C: addi x22, x22, 1     
+00400B93 // 0x30: li x23, 4            
+FF7B48E3 // 0x34: blt x22, x23, -16    
+00200393 // 0x38: li x7, 2             
+407AD533 // 0x3C: sra x10, x21, x7     
+00412083 // 0x40: lw ra, 4(sp)         
+00810113 // 0x44: addi sp, sp, 8       
+00008067 // 0x48: jalr x0, 0(ra)       
+05000513 // 0x4C: li x10, 80           
+00008067 // 0x50: jalr x0, 0(ra)       
+00100F93 // 0x54: li x31, 1            (SUBIR MOTORES)
+0000006F // 0x58: j 0
