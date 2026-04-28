@@ -49,7 +49,7 @@ module alu #(
             begin
                 if(a_i < b_i) begin
                     lt_o = 1'b1;
-                    result = {31'b0, lt_o};
+                    result = {31'b0, 1'b1};
                 end
             end
         endcase

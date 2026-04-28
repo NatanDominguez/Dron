@@ -19,8 +19,8 @@ module decoder #(
     output op_enum     alu_op_o,
     output logic       alu_b_src_o,
 
-    output logic       ram_re_o,
-    output logic       ram_we_o,
+    output logic       re_x_o,
+    output logic       we_x_o,
 
     output logic [DATA_SIZE-1:0] jump_offset_o,
     output pc_sel_enum       jump_o,
@@ -47,8 +47,8 @@ module decoder #(
         imm_o = '0;
         reg_we_o = 1'b1;
         reg_w_sel_o = W_ALU;
-        ram_re_o = 1'b0;
-        ram_we_o = 1'b0;
+        re_x_o = 1'b0;
+        we_x_o = 1'b0;
         jump_offset_o = '0;
         jump_o = PC_INCR;
         imm_u_o = '0;
@@ -111,7 +111,7 @@ module decoder #(
                 imm_o = {{20{inst_i[31]}}, inst_i[31:20]};
                 alu_b_src_o = 1'b1;
                 reg_w_sel_o = W_RAM;
-                ram_re_o = 1'b1;
+                re_x_o = 1'b1;
 /*
                 case(funct3)
                     3'b000: // LOAD BYTE
@@ -141,7 +141,7 @@ module decoder #(
             S_TYPE:
             begin
                 reg_we_o = 1'b0;
-                ram_we_o = 1'b1;
+                we_x_o = 1'b1;
                 alu_b_src_o = 1'b1;
 
                 imm_o = {{20{inst_i[31]}} ,inst_i[31:25], inst_i[11:7]};

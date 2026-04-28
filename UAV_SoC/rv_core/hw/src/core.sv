@@ -16,15 +16,15 @@ module core #(
 
     output logic [PC_W-1:0] pc_o,
 
-    output logic [31:0] ram_addr_o,
+    output logic [31:0] addr_x_o,
 
-    output logic re_ram_o,
-    input  logic [DATA_SIZE-1:0] ram_r_data_i,
-    input  logic ram_r_valid_i,
+    output logic re_x_o,
+    input  logic [DATA_SIZE-1:0] data_rx_i,
+    input  logic rx_valid_i,
 
-    output logic we_ram_o,
+    output logic we_x_o,
 
-    output logic [DATA_SIZE-1:0] ram_w_data_o
+    output logic [DATA_SIZE-1:0] data_wx_o
 
 );
 
@@ -48,16 +48,16 @@ module core #(
     pc_sel_enum           jump;
 
     always_comb begin
-        if(~re_ram_o) stall = 1'b0;
+        if(~re_x_o) stall = 1'b0;
         else stall = 1'b1;
 
-        if(stall == 1'b1 && ram_r_valid_i) stall = 1'b0;
+        if(stall == 1'b1 && rx_valid_i) stall = 1'b0;
     end
 
     assign b = alu_b_src ? imm : b_reg;
     
-    assign ram_addr_o = alu_o;
-    assign ram_w_data_o = b_reg;
+    assign addr_x_o = alu_o;
+    assign data_wx_o = b_reg;
 
     alu #(
         .DATA_SIZE (DATA_SIZE),
@@ -75,7 +75,7 @@ module core #(
     always_comb begin
         case(reg_w_sel)
             W_ALU:      w_reg = alu_o;
-            W_RAM:      w_reg = ram_r_data_i;
+            W_RAM:      w_reg = data_rx_i;
             W_JUMP:     w_reg = pc_o + 4;
             W_UPPER:    w_reg = imm_u;
             W_AUIPC:    w_reg = imm_u + pc_o;
@@ -114,8 +114,8 @@ module core #(
         .alu_b_src_o (alu_b_src),
         .reg_we_o (we_reg),
         .reg_w_sel_o ( reg_w_sel ),
-        .ram_re_o (re_ram_o),
-        .ram_we_o (we_ram_o),
+        .re_x_o (re_x_o),
+        .we_x_o (we_x_o),
         .jump_offset_o (jump_offset),
         .jump_o (jump),
         .imm_u_o (imm_u)

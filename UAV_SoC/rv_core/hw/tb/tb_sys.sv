@@ -7,7 +7,7 @@ module tb_sys;
     parameter int DATA_SIZE = 32;
     parameter int NUM_OP = 9;
     parameter int SIZE_OP = $clog2(NUM_OP);
-    parameter int ADDR_SIZE = 5;
+    parameter int ADDR_SIZE = 32;
     parameter int INST_DEPTH = 64;
     parameter int PC_W = 32;
     parameter int RAM_ADDR_SIZE = 32;
@@ -18,24 +18,53 @@ module tb_sys;
     logic [31:0] inst;
     logic [PC_W-1:0] pc;
 
+    logic re_x, we_x, rx_valid;
+    logic [DATA_SIZE-1:0] data_rx, data_wx;
+    logic [ADDR_SIZE-1:0] addr_x;
+
     logic re_ram, we_ram, ram_r_valid;
-    logic [RAM_ADDR_SIZE-1:0] ram_addr;
+    logic [ADDR_SIZE-1:0] ram_addr;
     logic [DATA_SIZE-1:0] ram_r_data, ram_w_data;
 
     core i_core (
-        .clk_i (clk),
-        .rst_ni (rst_n),
+        .clk_i      ( clk      ),
+        .rst_ni     ( rst_n    ),
 
-        .inst_i (inst),
-        .pc_o   (pc),
+        .inst_i     ( inst     ),
+        .pc_o       ( pc       ),
         
-        .ram_addr_o ( ram_addr),
-        .re_ram_o (re_ram),
+        .addr_x_o    ( addr_x  ),
+        .re_x_o     ( re_x     ),
+        .data_rx_i  ( data_rx  ),
+        .rx_valid_i ( rx_valid ),
+
+        .we_x_o     ( we_x     ),
+        .data_wx_o  ( data_wx  )
+    );
+
+    data_controller #(
+        .DATA_SIZE (DATA_SIZE),
+        .ADDR_SIZE (ADDR_SIZE)
+        
+        ) i_data_controller (
+        .addr_i ( addr_x ),
+        
+        .re_x_i ( re_x ),
+        .data_rx_o ( data_rx ),
+        .rx_valid_o  ( rx_valid),
+
+        .we_x_i (we_x),
+        .data_wx_i (data_wx),
+
+        
+        .ram_addr_o (ram_addr),
         .ram_r_data_i (ram_r_data),
         .ram_r_valid_i (ram_r_valid),
+        .ram_re_o (re_ram),
 
-        .we_ram_o (we_ram),
-        .ram_w_data_o (ram_w_data)
+        
+        .ram_w_data_o(ram_w_data),
+        .ram_we_o (we_ram)
     );
 
     instr_mem #(
@@ -57,6 +86,8 @@ module tb_sys;
         .data_w_i       (ram_w_data)
     );
 
+    
+
 
     initial begin
         clk = 1'b0;
@@ -70,7 +101,7 @@ module tb_sys;
         repeat(5) @(posedge clk);
         rst_n = 1'b1;
 
-        repeat(100000) @(posedge clk);
+        repeat(256) @(posedge clk);
 
         $finish;
     end

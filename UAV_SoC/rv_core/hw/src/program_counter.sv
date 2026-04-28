@@ -40,7 +40,6 @@ module program_counter #(
             pc_o <= '0;
         end else if (!stall_i) begin
             pc_o <= take_branch ? ((jump_i == PC_JALR) ? alu_i : pc_o + jump_offset_i) : (pc_o + 4);
-            //pc_o <= take_branch ? (pc_o + ((jump_i == PC_JALR) ? alu_i : jump_offset_i)) : (pc_o + 4);
         end
     end
     
