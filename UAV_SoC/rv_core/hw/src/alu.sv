@@ -45,9 +45,13 @@ module alu #(
             SRL:    result = {1'b0, a_i >> b_i[SIZE_LOG-1:0]};
             SRA:    result = {1'b0, signed'(a_i) >>> b_i[SIZE_LOG-1:0]};
 
-            SLT:    if(a_i < b_i) lt_o = 1'b1;
-
-            default: result = '0;
+            SLT:
+            begin
+                if(a_i < b_i) begin
+                    lt_o = 1'b1;
+                    result = {31'b0, lt_o};
+                end
+            end
         endcase
     end
 

@@ -70,7 +70,7 @@ module tb_sys;
         repeat(5) @(posedge clk);
         rst_n = 1'b1;
 
-        repeat(255) @(posedge clk);
+        repeat(100000) @(posedge clk);
 
         $finish;
     end

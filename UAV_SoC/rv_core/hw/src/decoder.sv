@@ -83,12 +83,27 @@ module decoder #(
             begin
                 imm_o = {{20{inst_i[31]}}, inst_i[31:20]};
                 alu_b_src_o = 1'b1;
-
                 case(funct3)
                     F3_ADD_SUB:
-                    begin
-                        
-                    end
+                        begin
+                            case(funct7)
+                                F7_STANDARD: alu_op_o = ADD;
+                                F7_ALT: alu_op_o = SUB;
+                            endcase
+                        end
+                    F3_SLL:     alu_op_o = SLL;
+                    F3_SLT:     alu_op_o = SLT;
+                    F3_SLTU:    alu_op_o = SLT;
+                    F3_XOR:     alu_op_o = XOR;
+                    F3_SRL_SRA: 
+                        begin
+                            case(funct7)
+                                F7_STANDARD:    alu_op_o = SRL;
+                                F7_ALT:         alu_op_o = SRA;
+                            endcase
+                        end
+                    F3_OR:      alu_op_o = OR;
+                    F3_AND:     alu_op_o = AND;
                 endcase
             end
             I_TYPE_LOAD:

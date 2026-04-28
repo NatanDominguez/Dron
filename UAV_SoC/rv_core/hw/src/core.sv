@@ -47,9 +47,6 @@ module core #(
     logic [DATA_SIZE-1:0] imm, jump_offset, imm_u;
     pc_sel_enum           jump;
 
-    // PC
-    logic [PC_W-1:0] next_pc;
-
     always_comb begin
         if(~re_ram_o) stall = 1'b0;
         else stall = 1'b1;

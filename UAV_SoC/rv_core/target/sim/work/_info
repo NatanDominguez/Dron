@@ -11,23 +11,23 @@ Z0 dC:/Proyectos/Core/target/sim
 valu
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
 Z2 DXx4 work 8 core_pkg 0 22 @Zlc5@Q;nON8iVPdU>YC03
-DXx4 work 11 alu_sv_unit 0 22 hCC]TSB6MOP]HOU?J`AD_2
+DXx4 work 11 alu_sv_unit 0 22 _`NP<b6YR[al0XUI`3hNL1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 31
 !i10b 1
-!s100 GYIBLNU?ZT@^A0YjkVO8[1
-I:d0EXP2o@o?2Il[EXjW<@1
+!s100 7Y;P4NWUHN39dV^I3X9<Z2
+IHezLji`7BDPDFz9gIFUT32
 !s105 alu_sv_unit
 S1
-Z4 dC:/Storage/Dron/UAV_SoC/rv_core/target/sim
-Z5 w1777327054
+Z4 dC:/Proyectos/Dron/UAV_SoC/rv_core/target/sim
+Z5 w1777372376
 Z6 8../../hw/src/alu.sv
 Z7 F../../hw/src/alu.sv
 L0 6
 Z8 OV;L;10.5b;63
-Z9 !s108 1777332118.000000
+Z9 !s108 1777384933.000000
 Z10 !s107 ../../hw/src/alu.sv|
 Z11 !s90 -reportprogress|300|-sv|../../hw/src/alu.sv|
 !i113 1
@@ -36,13 +36,13 @@ Z12 tCvgOpt 0
 Xalu_sv_unit
 R1
 R2
-VhCC]TSB6MOP]HOU?J`AD_2
+V_`NP<b6YR[al0XUI`3hNL1
 r1
 !s85 0
 31
 !i10b 1
-!s100 GQbWilX`K`MT?2HO_Y01c1
-IhCC]TSB6MOP]HOU?J`AD_2
+!s100 oNKeORk]=o^P3;TmIaI1e0
+I_`NP<b6YR[al0XUI`3hNL1
 !i103 1
 S1
 R4
@@ -60,38 +60,38 @@ R12
 vcore
 R1
 R2
-DXx4 work 12 core_sv_unit 0 22 91^XQ][FfeHQW]QdFio[]3
+DXx4 work 12 core_sv_unit 0 22 Z9]E<f6el_hLdHMQ7GQ>=0
 R3
 r1
 !s85 0
 31
 !i10b 1
-!s100 YN<P^Bm5WGJ_6W4eHnWF?2
-IcL<[3Jja2aYlKlMR4Ebl<0
+!s100 A5Ia0n8cgf9Oj]2cL0oCz0
+IO0WEZ<2lU=TmhM<W<Ti>10
 !s105 core_sv_unit
 S1
 R4
-Z13 w1777329886
+Z13 w1777364314
 Z14 8../../hw/src/core.sv
 Z15 F../../hw/src/core.sv
 L0 5
 R8
-R9
-Z16 !s107 ../../hw/src/core.sv|
-Z17 !s90 -reportprogress|300|-sv|../../hw/src/core.sv|
+Z16 !s108 1777384934.000000
+Z17 !s107 ../../hw/src/core.sv|
+Z18 !s90 -reportprogress|300|-sv|../../hw/src/core.sv|
 !i113 1
 o-sv
 R12
 Xcore_pkg
 R1
-Z18 !s110 1777332118
+Z19 !s110 1777384933
 !i10b 1
 !s100 L8OMHNzmo=1a^VFcShn^X0
 I@Zlc5@Q;nON8iVPdU>YC03
 V@Zlc5@Q;nON8iVPdU>YC03
 S1
 R4
-w1777329702
+Z20 w1777364183
 8../../hw/src/pkg/core_pkg.svh
 F../../hw/src/pkg/core_pkg.svh
 L0 2
@@ -108,13 +108,13 @@ R12
 Xcore_sv_unit
 R1
 R2
-V91^XQ][FfeHQW]QdFio[]3
+VZ9]E<f6el_hLdHMQ7GQ>=0
 r1
 !s85 0
 31
 !i10b 1
-!s100 f3O5hgcP=EYVPZV1Ufk3Y1
-I91^XQ][FfeHQW]QdFio[]3
+!s100 LIIIZOY`K]282i3l_H0:m0
+IZ9]E<f6el_hLdHMQ7GQ>=0
 !i103 1
 S1
 R4
@@ -123,66 +123,66 @@ R14
 R15
 L0 3
 R8
-R9
 R16
 R17
+R18
 !i113 1
 o-sv
 R12
 vdecoder
 R1
-Z19 DXx4 work 9 riscv_pkg 0 22 ]Mhoe2V6RmcNbhfo8ZE3_3
+Z21 DXx4 work 9 riscv_pkg 0 22 ]Mhoe2V6RmcNbhfo8ZE3_3
 R2
-DXx4 work 15 decoder_sv_unit 0 22 V7RQ74NIPb9^_O;4:mkdz1
+DXx4 work 15 decoder_sv_unit 0 22 CzB_c2OO?Z7XCO;aT5=am2
 R3
 r1
 !s85 0
 31
 !i10b 1
-!s100 ^7F5^TKff`h>6DFUPPM??3
-IeBm8bAkUif6jYIf@?@bE00
+!s100 V3Pbe_1YCBhGoWZkSXa^I1
+ImT4cD^LRS>k^QHEmXCIgF0
 !s105 decoder_sv_unit
 S1
 R4
-Z20 w1777329671
-Z21 8../../hw/src/decoder.sv
-Z22 F../../hw/src/decoder.sv
+Z22 w1777371845
+Z23 8../../hw/src/decoder.sv
+Z24 F../../hw/src/decoder.sv
 L0 5
 R8
 R9
-Z23 !s107 ../../hw/src/decoder.sv|
-Z24 !s90 -reportprogress|300|-sv|../../hw/src/decoder.sv|
+Z25 !s107 ../../hw/src/decoder.sv|
+Z26 !s90 -reportprogress|300|-sv|../../hw/src/decoder.sv|
 !i113 1
 o-sv
 R12
 Xdecoder_sv_unit
 R1
-R19
+R21
 R2
-VV7RQ74NIPb9^_O;4:mkdz1
+VCzB_c2OO?Z7XCO;aT5=am2
 r1
 !s85 0
 31
 !i10b 1
-!s100 4UhI7_0Dk<]^?C9bRDfL81
-IV7RQ74NIPb9^_O;4:mkdz1
+!s100 60A4hWNWEbXkj:UHc5ZD=2
+ICzB_c2OO?Z7XCO;aT5=am2
 !i103 1
 S1
 R4
-R20
-R21
 R22
+R23
+R24
 L0 2
 R8
 R9
-R23
-R24
+R25
+R26
 !i113 1
 o-sv
 R12
 vinstr_mem
 R1
-R18
+Z27 !s110 1777384934
 !i10b 1
 !s100 aO74TPHd@cFcMUbfhf:bR0
 I3mkZC93@>9S][42Kd4kEI0
@@ -190,7 +190,7 @@ R3
 !s105 instr_mem_sv_unit
 S1
 R4
-w1777319931
+R20
 8../../hw/src/instr_mem.sv
 F../../hw/src/instr_mem.sv
 L0 2
@@ -198,7 +198,7 @@ R8
 r1
 !s85 0
 31
-R9
+R16
 !s107 ../../hw/src/instr_mem.sv|
 !s90 -reportprogress|300|-sv|../../hw/src/instr_mem.sv|
 !i113 1
@@ -218,14 +218,14 @@ ITcE_C2RKYlIhH2>OiKZ2]1
 !s105 program_counter_sv_unit
 S1
 R4
-Z25 w1777330139
-Z26 8../../hw/src/program_counter.sv
-Z27 F../../hw/src/program_counter.sv
+R20
+Z28 8../../hw/src/program_counter.sv
+Z29 F../../hw/src/program_counter.sv
 L0 4
 R8
-R9
-Z28 !s107 ../../hw/src/program_counter.sv|
-Z29 !s90 -reportprogress|300|-sv|../../hw/src/program_counter.sv|
+R16
+Z30 !s107 ../../hw/src/program_counter.sv|
+Z31 !s90 -reportprogress|300|-sv|../../hw/src/program_counter.sv|
 !i113 1
 o-sv
 R12
@@ -242,20 +242,20 @@ IzT>IbZdUL3aSbbBhOPKV=3
 !i103 1
 S1
 R4
-R25
-R26
-R27
-L0 2
-R8
-R9
+R20
 R28
 R29
+L0 2
+R8
+R16
+R30
+R31
 !i113 1
 o-sv
 R12
 vram
 R1
-R18
+R27
 !i10b 1
 !s100 __W]AZn`M2kMbGEGG0m7B1
 I>>=`n[FbSV]`=[YjX;4g:1
@@ -263,7 +263,7 @@ R3
 !s105 ram_sv_unit
 S1
 R4
-w1777320042
+R20
 8../../hw/src/ram.sv
 F../../hw/src/ram.sv
 L0 2
@@ -271,7 +271,7 @@ R8
 r1
 !s85 0
 31
-R9
+R16
 !s107 ../../hw/src/ram.sv|
 !s90 -reportprogress|300|-sv|../../hw/src/ram.sv|
 !i113 1
@@ -279,7 +279,7 @@ o-sv
 R12
 vregisters
 R1
-R18
+R19
 !i10b 1
 !s100 RFJmWGe7CbmgdHaa1WL@V1
 Ia17W;So7fGDdWJPc_be781
@@ -287,17 +287,17 @@ R3
 !s105 registers_sv_unit
 S1
 R4
-w1777315714
-Z30 8../../hw/src/registers.sv
-Z31 F../../hw/src/registers.sv
+R20
+Z32 8../../hw/src/registers.sv
+Z33 F../../hw/src/registers.sv
 L0 2
 R8
 r1
 !s85 0
 31
 R9
-Z32 !s107 ../../hw/src/registers.sv|
-Z33 !s90 -reportprogress|300|-sv|../../hw/src/registers.sv|
+Z34 !s107 ../../hw/src/registers.sv|
+Z35 !s90 -reportprogress|300|-sv|../../hw/src/registers.sv|
 !i113 1
 o-sv
 R12
@@ -312,29 +312,29 @@ VWb^2VlCkBF>Q^SRZhY7F82
 S1
 R0
 w1777212053
-R30
-R31
+R32
+R33
 L0 44
 R8
 r1
 !s85 0
 31
 !s108 1777213581.000000
-R32
-R33
+R34
+R35
 !i113 1
 o-sv
 R12
 Xriscv_pkg
 R1
-R18
+R19
 !i10b 1
 !s100 gU:>NR:ASS@Xj<`hSXaEG2
 I]Mhoe2V6RmcNbhfo8ZE3_3
 V]Mhoe2V6RmcNbhfo8ZE3_3
 S1
 R4
-w1777328181
+R20
 8../../hw/src/pkg/riscv_pkg.svh
 F../../hw/src/pkg/riscv_pkg.svh
 L0 2
@@ -355,20 +355,20 @@ R1
 !s100 SkY4iEW<igM^`FW;fHKmf2
 I<z:k;O251C5EWZjnYQnL50
 R3
-Z34 !s105 tb_core_sv_unit
+Z36 !s105 tb_core_sv_unit
 S1
 R0
 w1777213811
-Z35 8../../hw/tb/tb_core.sv
-Z36 F../../hw/tb/tb_core.sv
+Z37 8../../hw/tb/tb_core.sv
+Z38 F../../hw/tb/tb_core.sv
 L0 4
 R8
 r1
 !s85 0
 31
 !s108 1777213814.000000
-Z37 !s107 ../../hw/tb/tb_core.sv|
-Z38 !s90 -reportprogress|300|-sv|../../hw/tb/tb_core.sv|
+Z39 !s107 ../../hw/tb/tb_core.sv|
+Z40 !s90 -reportprogress|300|-sv|../../hw/tb/tb_core.sv|
 !i113 1
 o-sv
 R12
@@ -380,53 +380,53 @@ DXx4 work 8 core_pkg 0 22 ^>VWF8`4h[k4>UFe1e9d10
 !s100 LU@UdGoM`Fb:Nc]=1h`<73
 IeADFNo]H5CY>J75TUI`M>1
 R3
-R34
+R36
 S1
 R0
 w1777305902
-R35
-R36
+R37
+R38
 L0 4
 R8
 r1
 !s85 0
 31
 !s108 1777307446.000000
-R37
-R38
+R39
+R40
 !i113 1
 o-sv
 R12
 vtb_sys
 R1
 R2
-R19
+R21
 DXx4 work 14 tb_sys_sv_unit 0 22 9zfOcoUg>_Z?NLZJiE=^K2
 R3
 r1
 !s85 0
 31
 !i10b 1
-!s100 K>oO:GB7QLomT_BZ>>Bm>1
-IzgC9Y1ilXM16?nBD<fPjA3
+!s100 Ib<JkS9i61oN5JjDh:W?J0
+I^@OAi<Jdd_anP;F[zEVdF2
 !s105 tb_sys_sv_unit
 S1
 R4
-Z39 w1777330286
-Z40 8../../hw/tb/tb_sys.sv
-Z41 F../../hw/tb/tb_sys.sv
+Z41 w1777365748
+Z42 8../../hw/tb/tb_sys.sv
+Z43 F../../hw/tb/tb_sys.sv
 L0 5
 R8
-R9
-Z42 !s107 ../../hw/tb/tb_sys.sv|
-Z43 !s90 -reportprogress|300|-sv|../../hw/tb/tb_sys.sv|
+R16
+Z44 !s107 ../../hw/tb/tb_sys.sv|
+Z45 !s90 -reportprogress|300|-sv|../../hw/tb/tb_sys.sv|
 !i113 1
 o-sv
 R12
 Xtb_sys_sv_unit
 R1
 R2
-R19
+R21
 V9zfOcoUg>_Z?NLZJiE=^K2
 r1
 !s85 0
@@ -437,14 +437,14 @@ I9zfOcoUg>_Z?NLZJiE=^K2
 !i103 1
 S1
 R4
-R39
-R40
 R41
-L0 2
-R8
-R9
 R42
 R43
+L0 2
+R8
+R16
+R44
+R45
 !i113 1
 o-sv
 R12
