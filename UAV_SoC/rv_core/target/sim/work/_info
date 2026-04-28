@@ -27,7 +27,7 @@ Z6 8../../hw/src/alu.sv
 Z7 F../../hw/src/alu.sv
 L0 6
 Z8 OV;L;10.5b;63
-Z9 !s108 1777388877.000000
+Z9 !s108 1777413535.000000
 Z10 !s107 ../../hw/src/alu.sv|
 Z11 !s90 -reportprogress|300|-sv|../../hw/src/alu.sv|
 !i113 1
@@ -84,7 +84,7 @@ o-sv
 R12
 Xcore_pkg
 R1
-Z18 !s110 1777388877
+Z18 !s110 1777413535
 !i10b 1
 !s100 L8OMHNzmo=1a^VFcShn^X0
 I@Zlc5@Q;nON8iVPdU>YC03
@@ -131,15 +131,15 @@ o-sv
 R12
 vdata_controller
 R1
-R18
+Z19 !s110 1777413536
 !i10b 1
-!s100 0cD;a<>ibzY2C[eY>LUCb3
-IiDFl;j]M^]WoYf7dTP_0;2
+!s100 L]XHGE<Ii57B_^;THAX^a3
+Ii1GnEGcaljiUO`=hMQ]Kc0
 R3
 !s105 data_controller_sv_unit
 S1
 R4
-w1777388641
+w1777413474
 8../../hw/src/data_controller.sv
 F../../hw/src/data_controller.sv
 L0 3
@@ -147,7 +147,7 @@ R8
 r1
 !s85 0
 31
-R9
+Z20 !s108 1777413536.000000
 !s107 ../../hw/src/data_controller.sv|
 !s90 -reportprogress|300|-sv|../../hw/src/data_controller.sv|
 !i113 1
@@ -155,7 +155,7 @@ o-sv
 R12
 vdecoder
 R1
-Z19 DXx4 work 9 riscv_pkg 0 22 ]Mhoe2V6RmcNbhfo8ZE3_3
+Z21 DXx4 work 9 riscv_pkg 0 22 ]Mhoe2V6RmcNbhfo8ZE3_3
 R2
 DXx4 work 15 decoder_sv_unit 0 22 CzB_c2OO?Z7XCO;aT5=am2
 R3
@@ -168,20 +168,20 @@ IzL:;BmzD?OfN@aYLd[nKD3
 !s105 decoder_sv_unit
 S1
 R4
-Z20 w1777386383
-Z21 8../../hw/src/decoder.sv
-Z22 F../../hw/src/decoder.sv
+Z22 w1777386383
+Z23 8../../hw/src/decoder.sv
+Z24 F../../hw/src/decoder.sv
 L0 5
 R8
 R9
-Z23 !s107 ../../hw/src/decoder.sv|
-Z24 !s90 -reportprogress|300|-sv|../../hw/src/decoder.sv|
+Z25 !s107 ../../hw/src/decoder.sv|
+Z26 !s90 -reportprogress|300|-sv|../../hw/src/decoder.sv|
 !i113 1
 o-sv
 R12
 Xdecoder_sv_unit
 R1
-R19
+R21
 R2
 VCzB_c2OO?Z7XCO;aT5=am2
 r1
@@ -193,14 +193,14 @@ ICzB_c2OO?Z7XCO;aT5=am2
 !i103 1
 S1
 R4
-R20
-R21
 R22
+R23
+R24
 L0 2
 R8
 R9
-R23
-R24
+R25
+R26
 !i113 1
 o-sv
 R12
@@ -242,14 +242,14 @@ I5BTB>GdZ@EkMgJ6CTKE902
 !s105 program_counter_sv_unit
 S1
 R4
-Z25 w1777387486
-Z26 8../../hw/src/program_counter.sv
-Z27 F../../hw/src/program_counter.sv
+Z27 w1777387486
+Z28 8../../hw/src/program_counter.sv
+Z29 F../../hw/src/program_counter.sv
 L0 4
 R8
 R9
-Z28 !s107 ../../hw/src/program_counter.sv|
-Z29 !s90 -reportprogress|300|-sv|../../hw/src/program_counter.sv|
+Z30 !s107 ../../hw/src/program_counter.sv|
+Z31 !s90 -reportprogress|300|-sv|../../hw/src/program_counter.sv|
 !i113 1
 o-sv
 R12
@@ -266,14 +266,14 @@ I2[8CYjJBfHdlCKcbMfXBh0
 !i103 1
 S1
 R4
-R25
-R26
 R27
+R28
+R29
 L0 2
 R8
 R9
-R28
-R29
+R30
+R31
 !i113 1
 o-sv
 R12
@@ -312,16 +312,16 @@ R3
 S1
 R4
 w1777315714
-Z30 8../../hw/src/registers.sv
-Z31 F../../hw/src/registers.sv
+Z32 8../../hw/src/registers.sv
+Z33 F../../hw/src/registers.sv
 L0 2
 R8
 r1
 !s85 0
 31
 R9
-Z32 !s107 ../../hw/src/registers.sv|
-Z33 !s90 -reportprogress|300|-sv|../../hw/src/registers.sv|
+Z34 !s107 ../../hw/src/registers.sv|
+Z35 !s90 -reportprogress|300|-sv|../../hw/src/registers.sv|
 !i113 1
 o-sv
 R12
@@ -336,16 +336,16 @@ VWb^2VlCkBF>Q^SRZhY7F82
 S1
 R0
 w1777212053
-R30
-R31
+R32
+R33
 L0 44
 R8
 r1
 !s85 0
 31
 !s108 1777213581.000000
-R32
-R33
+R34
+R35
 !i113 1
 o-sv
 R12
@@ -379,20 +379,20 @@ R1
 !s100 SkY4iEW<igM^`FW;fHKmf2
 I<z:k;O251C5EWZjnYQnL50
 R3
-Z34 !s105 tb_core_sv_unit
+Z36 !s105 tb_core_sv_unit
 S1
 R0
 w1777213811
-Z35 8../../hw/tb/tb_core.sv
-Z36 F../../hw/tb/tb_core.sv
+Z37 8../../hw/tb/tb_core.sv
+Z38 F../../hw/tb/tb_core.sv
 L0 4
 R8
 r1
 !s85 0
 31
 !s108 1777213814.000000
-Z37 !s107 ../../hw/tb/tb_core.sv|
-Z38 !s90 -reportprogress|300|-sv|../../hw/tb/tb_core.sv|
+Z39 !s107 ../../hw/tb/tb_core.sv|
+Z40 !s90 -reportprogress|300|-sv|../../hw/tb/tb_core.sv|
 !i113 1
 o-sv
 R12
@@ -404,71 +404,95 @@ DXx4 work 8 core_pkg 0 22 ^>VWF8`4h[k4>UFe1e9d10
 !s100 LU@UdGoM`Fb:Nc]=1h`<73
 IeADFNo]H5CY>J75TUI`M>1
 R3
-R34
+R36
 S1
 R0
 w1777305902
-R35
-R36
+R37
+R38
 L0 4
 R8
 r1
 !s85 0
 31
 !s108 1777307446.000000
-R37
-R38
+R39
+R40
 !i113 1
 o-sv
 R12
 vtb_sys
 R1
 R2
-R19
-DXx4 work 14 tb_sys_sv_unit 0 22 ][f1]EC6Vf_8aCzP<6SBb3
+R21
+DXx4 work 14 tb_sys_sv_unit 0 22 6gRZiC4TJiVc>P3hCmDhz0
 R3
 r1
 !s85 0
 31
 !i10b 1
-!s100 DTX0L@Y_Y2CbP=ZRJRkT23
-I`BhC^HY5`3TX@@bik0]ZM1
+!s100 _9eGU2CfWeNNW<<jZ9EBc0
+I9=ZkXQ8O7dKR8KCCmfIBJ3
 !s105 tb_sys_sv_unit
 S1
 R4
-Z39 w1777388739
-Z40 8../../hw/tb/tb_sys.sv
-Z41 F../../hw/tb/tb_sys.sv
+Z41 w1777413340
+Z42 8../../hw/tb/tb_sys.sv
+Z43 F../../hw/tb/tb_sys.sv
 L0 5
 R8
-R9
-Z42 !s107 ../../hw/tb/tb_sys.sv|
-Z43 !s90 -reportprogress|300|-sv|../../hw/tb/tb_sys.sv|
+R20
+Z44 !s107 ../../hw/tb/tb_sys.sv|
+Z45 !s90 -reportprogress|300|-sv|../../hw/tb/tb_sys.sv|
 !i113 1
 o-sv
 R12
 Xtb_sys_sv_unit
 R1
 R2
-R19
-V][f1]EC6Vf_8aCzP<6SBb3
+R21
+V6gRZiC4TJiVc>P3hCmDhz0
 r1
 !s85 0
 31
 !i10b 1
-!s100 VMOZii=b0CiIFA`TCn^Wn1
-I][f1]EC6Vf_8aCzP<6SBb3
+!s100 ^023AUmg586UKl>1EnW9g3
+I6gRZiC4TJiVc>P3hCmDhz0
 !i103 1
 S1
 R4
-R39
-R40
 R41
-L0 2
-R8
-R9
 R42
 R43
+L0 2
+R8
+R20
+R44
+R45
+!i113 1
+o-sv
+R12
+vuart
+R1
+R19
+!i10b 1
+!s100 J_WY:Y[RJ1lHm33JK9F6V2
+IekXDHH5IX>:^kK`UY>Aaj0
+R3
+!s105 uart_sv_unit
+S1
+R4
+w1777413417
+8../../../utils/uart/uart.sv
+F../../../utils/uart/uart.sv
+L0 3
+R8
+r1
+!s85 0
+31
+R20
+!s107 ../../../utils/uart/uart.sv|
+!s90 -reportprogress|300|-sv|../../../utils/uart/uart.sv|
 !i113 1
 o-sv
 R12

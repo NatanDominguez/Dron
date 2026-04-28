@@ -7,14 +7,14 @@ module uart #(
     input clk_i,
     input rst_ni,
 
-    input [ADDR_SIZE-1:0] addr_i,
+    input logic [ADDR_SIZE-1:0] addr_i,
 
-    input [DATA_SIZE-1:0] data_w_i,
-    input we_i,
+    input logic [DATA_SIZE-1:0] data_w_i,
+    input logic we_i,
 
-    output [DATA_SIZE-1:0] data_r_o,
-    output r_valid,
-    input re_i
+    output logic [DATA_SIZE-1:0] data_r_o,
+    output logic r_valid_o,
+    input logic re_i
 );
 
     reg [DATA_SIZE-1:0] data;
@@ -62,7 +62,7 @@ module uart #(
                 end
                 2'b10:
                 begin
-                    if(we_i) data <= data_w_i[7:0];
+                    if(we_i) baudrate <= data_w_i[7:0];
                     else if(re_i) begin
                         data_r_o[7:0] <= baudrate;
                         r_valid_o <= 1'b1;
@@ -73,11 +73,14 @@ module uart #(
 
     end
 
+    logic [7:0] data_tx;
+    assign data_tx = data;
+/*
     uart_tx i_uart_tx (
         .clk_i (clk_i),
         .rst_ni (rst_ni),
         .data_tx_i (data_tx),
-        .prescale_i (prescale)
-    );
+        .prescale_i (baudrate)
+    );*/
 
 endmodule

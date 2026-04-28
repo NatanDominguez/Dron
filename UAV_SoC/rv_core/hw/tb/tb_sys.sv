@@ -26,6 +26,12 @@ module tb_sys;
     logic [ADDR_SIZE-1:0] ram_addr;
     logic [DATA_SIZE-1:0] ram_r_data, ram_w_data;
 
+    logic re_uart, we_uart, uart_r_valid;
+    logic [ADDR_SIZE-1:0] uart_addr;
+    logic [DATA_SIZE-1:0] uart_r_data, uart_w_data;
+
+
+
     core i_core (
         .clk_i      ( clk      ),
         .rst_ni     ( rst_n    ),
@@ -56,15 +62,22 @@ module tb_sys;
         .we_x_i (we_x),
         .data_wx_i (data_wx),
 
-        
+        // RAM
         .ram_addr_o (ram_addr),
         .ram_r_data_i (ram_r_data),
         .ram_r_valid_i (ram_r_valid),
         .ram_re_o (re_ram),
-
-        
         .ram_w_data_o(ram_w_data),
-        .ram_we_o (we_ram)
+        .ram_we_o (we_ram),
+
+        // UART
+        .uart_addr_o (uart_addr),
+        .uart_r_data_i (uart_r_data),
+        .uart_r_valid_i (uart_r_valid),
+        .uart_re_o(re_uart),
+        .uart_w_data_o(uart_w_data),
+        .uart_we_o(we_uart)
+
     );
 
     instr_mem #(
@@ -84,6 +97,21 @@ module tb_sys;
         .we_i           (we_ram),
         .addr_w_i       (ram_addr),
         .data_w_i       (ram_w_data)
+    );
+
+
+    uart #(
+        .DATA_SIZE(DATA_SIZE),
+        .ADDR_SIZE(ADDR_SIZE)  
+    ) i_uart (
+        .clk_i (clk),
+        .rst_ni (rst_n),
+        .addr_i (uart_addr),
+        .data_w_i (uart_w_data),
+        .we_i (we_uart),
+        .data_r_o(uart_r_data),
+        .r_valid_o(uart_r_valid),
+        .re_i(re_uart)
     );
 
     
