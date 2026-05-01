@@ -1,29 +1,29 @@
-# Reading C:/Storage/ModelSim/modelsim_ase/tcl/vsim/pref.tcl
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 do run.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work work 
 # Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:46:52 on Apr 28,2026
+# Start time: 18:34:57 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/pkg/riscv_pkg.svh 
 # -- Compiling package riscv_pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 23:46:53 on Apr 28,2026, Elapsed time: 0:00:01
+# End time: 18:34:58 on Apr 29,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:46:53 on Apr 28,2026
+# Start time: 18:34:58 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/pkg/core_pkg.svh 
 # -- Compiling package core_pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 23:46:53 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:34:58 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:46:53 on Apr 28,2026
+# Start time: 18:34:58 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/alu.sv 
 # -- Compiling package alu_sv_unit
 # -- Importing package core_pkg
@@ -31,19 +31,19 @@ do run.do
 # 
 # Top level modules:
 # 	alu
-# End time: 23:46:53 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:34:58 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:46:53 on Apr 28,2026
+# Start time: 18:34:58 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/registers.sv 
 # -- Compiling module registers
 # 
 # Top level modules:
 # 	registers
-# End time: 23:46:53 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:34:58 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:46:53 on Apr 28,2026
+# Start time: 18:34:58 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/decoder.sv 
 # -- Compiling package decoder_sv_unit
 # -- Importing package riscv_pkg
@@ -52,10 +52,10 @@ do run.do
 # 
 # Top level modules:
 # 	decoder
-# End time: 23:46:53 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:34:58 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:46:53 on Apr 28,2026
+# Start time: 18:34:58 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/program_counter.sv 
 # -- Compiling package program_counter_sv_unit
 # -- Importing package core_pkg
@@ -63,28 +63,28 @@ do run.do
 # 
 # Top level modules:
 # 	program_counter
-# End time: 23:46:53 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:34:58 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:46:53 on Apr 28,2026
+# Start time: 18:34:58 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/instr_mem.sv 
 # -- Compiling module instr_mem
 # 
 # Top level modules:
 # 	instr_mem
-# End time: 23:46:53 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:34:58 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:46:53 on Apr 28,2026
+# Start time: 18:34:59 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/ram.sv 
 # -- Compiling module ram
 # 
 # Top level modules:
 # 	ram
-# End time: 23:46:53 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:34:59 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:46:53 on Apr 28,2026
+# Start time: 18:34:59 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/core.sv 
 # -- Compiling package core_sv_unit
 # -- Importing package core_pkg
@@ -92,1112 +92,28 @@ do run.do
 # 
 # Top level modules:
 # 	core
-# End time: 23:46:53 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:34:59 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:46:53 on Apr 28,2026
+# Start time: 18:34:59 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/data_controller.sv 
 # -- Compiling module data_controller
 # 
 # Top level modules:
 # 	data_controller
-# End time: 23:46:53 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:34:59 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:46:53 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/tb/tb_sys.sv 
-# -- Compiling package tb_sys_sv_unit
-# -- Importing package core_pkg
-# -- Importing package riscv_pkg
-# -- Compiling module tb_sys
-# 
-# Top level modules:
-# 	tb_sys
-# End time: 23:46:53 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" work.tb_sys 
-# Start time: 23:46:54 on Apr 28,2026
-# Loading sv_std.std
-# Loading work.riscv_pkg
-# Loading work.core_pkg
-# Loading work.tb_sys_sv_unit
-# Loading work.tb_sys
-# Loading work.core_sv_unit
-# Loading work.core
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.registers
-# Loading work.decoder_sv_unit
-# Loading work.decoder
-# Loading work.program_counter_sv_unit
-# Loading work.program_counter
-# Loading work.data_controller
-# Loading work.instr_mem
-# Loading work.ram
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: ndomingu  Hostname: BSC-8488104232  ProcessID: 11460
-#           Attempting to use alternate WLF file "./wlft2att0g".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft2att0g
-# ** Note: $finish    : ../../hw/tb/tb_sys.sv(106)
-#    Time: 2605 ps  Iteration: 1  Instance: /tb_sys
-# 1
-# Break in Module tb_sys at ../../hw/tb/tb_sys.sv line 106
-do run.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work work 
-# Modifying modelsim.ini
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/riscv_pkg.svh 
-# -- Compiling package riscv_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:53:01 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/core_pkg.svh 
-# -- Compiling package core_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:53:01 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/alu.sv 
-# -- Compiling package alu_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 23:53:01 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/registers.sv 
-# -- Compiling module registers
-# 
-# Top level modules:
-# 	registers
-# End time: 23:53:01 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/decoder.sv 
-# -- Compiling package decoder_sv_unit
-# -- Importing package riscv_pkg
-# -- Importing package core_pkg
-# -- Compiling module decoder
-# 
-# Top level modules:
-# 	decoder
-# End time: 23:53:02 on Apr 28,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:02 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/program_counter.sv 
-# -- Compiling package program_counter_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module program_counter
-# 
-# Top level modules:
-# 	program_counter
-# End time: 23:53:02 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:02 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/instr_mem.sv 
-# -- Compiling module instr_mem
-# 
-# Top level modules:
-# 	instr_mem
-# End time: 23:53:02 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:02 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/ram.sv 
-# -- Compiling module ram
-# 
-# Top level modules:
-# 	ram
-# End time: 23:53:02 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:02 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/core.sv 
-# -- Compiling package core_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module core
-# 
-# Top level modules:
-# 	core
-# End time: 23:53:02 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:02 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/data_controller.sv 
-# -- Compiling module data_controller
-# ** Error: ../../hw/src/data_controller.sv(57): (vlog-2730) Undefined variable: 'uart_addr_o'.
-# ** Error: ../../hw/src/data_controller.sv(59): (vlog-2730) Undefined variable: 'uart_re_o'.
-# ** Error: ../../hw/src/data_controller.sv(60): (vlog-2730) Undefined variable: 'uart_r_data_i'.
-# ** Error: ../../hw/src/data_controller.sv(61): (vlog-2730) Undefined variable: 'uart_r_valid_i'.
-# ** Error: ../../hw/src/data_controller.sv(64): (vlog-2730) Undefined variable: 'uart_we_o'.
-# ** Error: ../../hw/src/data_controller.sv(65): (vlog-2730) Undefined variable: 'uart_w_data_o'.
-# End time: 23:53:02 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 6, Warnings: 0
-# ** Error: C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./run.do line 13
-# C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv ../../hw/src/data_controller.sv"
-do run.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work work 
-# Modifying modelsim.ini
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:37 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/riscv_pkg.svh 
-# -- Compiling package riscv_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:53:37 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:37 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/core_pkg.svh 
-# -- Compiling package core_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:53:37 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:37 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/alu.sv 
-# -- Compiling package alu_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 23:53:37 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:37 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/registers.sv 
-# -- Compiling module registers
-# 
-# Top level modules:
-# 	registers
-# End time: 23:53:37 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:37 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/decoder.sv 
-# -- Compiling package decoder_sv_unit
-# -- Importing package riscv_pkg
-# -- Importing package core_pkg
-# -- Compiling module decoder
-# 
-# Top level modules:
-# 	decoder
-# End time: 23:53:37 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:37 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/program_counter.sv 
-# -- Compiling package program_counter_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module program_counter
-# 
-# Top level modules:
-# 	program_counter
-# End time: 23:53:38 on Apr 28,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:38 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/instr_mem.sv 
-# -- Compiling module instr_mem
-# 
-# Top level modules:
-# 	instr_mem
-# End time: 23:53:38 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:38 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/ram.sv 
-# -- Compiling module ram
-# 
-# Top level modules:
-# 	ram
-# End time: 23:53:38 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:38 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/core.sv 
-# -- Compiling package core_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module core
-# 
-# Top level modules:
-# 	core
-# End time: 23:53:38 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:53:38 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/data_controller.sv 
-# -- Compiling module data_controller
-# ** Error: ../../hw/src/data_controller.sv(57): (vlog-2730) Undefined variable: 'uart_addr_o'.
-# ** Error: ../../hw/src/data_controller.sv(59): (vlog-2730) Undefined variable: 'uart_re_o'.
-# ** Error: ../../hw/src/data_controller.sv(60): (vlog-2730) Undefined variable: 'uart_r_data_i'.
-# ** Error: ../../hw/src/data_controller.sv(61): (vlog-2730) Undefined variable: 'uart_r_valid_i'.
-# ** Error: ../../hw/src/data_controller.sv(64): (vlog-2730) Undefined variable: 'uart_we_o'.
-# ** Error: ../../hw/src/data_controller.sv(65): (vlog-2730) Undefined variable: 'uart_w_data_o'.
-# End time: 23:53:38 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 6, Warnings: 0
-# ** Error: C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./run.do line 13
-# C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv ../../hw/src/data_controller.sv"
-do run.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work work 
-# Modifying modelsim.ini
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/riscv_pkg.svh 
-# -- Compiling package riscv_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:55:01 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/core_pkg.svh 
-# -- Compiling package core_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:55:01 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/alu.sv 
-# -- Compiling package alu_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 23:55:01 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/registers.sv 
-# -- Compiling module registers
-# 
-# Top level modules:
-# 	registers
-# End time: 23:55:01 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/decoder.sv 
-# -- Compiling package decoder_sv_unit
-# -- Importing package riscv_pkg
-# -- Importing package core_pkg
-# -- Compiling module decoder
-# 
-# Top level modules:
-# 	decoder
-# End time: 23:55:01 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/program_counter.sv 
-# -- Compiling package program_counter_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module program_counter
-# 
-# Top level modules:
-# 	program_counter
-# End time: 23:55:01 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/instr_mem.sv 
-# -- Compiling module instr_mem
-# 
-# Top level modules:
-# 	instr_mem
-# End time: 23:55:01 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/ram.sv 
-# -- Compiling module ram
-# 
-# Top level modules:
-# 	ram
-# End time: 23:55:01 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:01 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/core.sv 
-# -- Compiling package core_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module core
-# 
-# Top level modules:
-# 	core
-# End time: 23:55:02 on Apr 28,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:02 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/data_controller.sv 
-# -- Compiling module data_controller
-# ** Error: (vlog-13069) ../../hw/src/data_controller.sv(27): near "output": syntax error, unexpected output, expecting ')'.
-# End time: 23:55:02 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./run.do line 13
-# C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv ../../hw/src/data_controller.sv"
-do run.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work work 
-# Modifying modelsim.ini
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:12 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/riscv_pkg.svh 
-# -- Compiling package riscv_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:55:12 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:12 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/core_pkg.svh 
-# -- Compiling package core_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:55:12 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:12 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/alu.sv 
-# -- Compiling package alu_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 23:55:12 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:12 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/registers.sv 
-# -- Compiling module registers
-# 
-# Top level modules:
-# 	registers
-# End time: 23:55:12 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:12 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/decoder.sv 
-# -- Compiling package decoder_sv_unit
-# -- Importing package riscv_pkg
-# -- Importing package core_pkg
-# -- Compiling module decoder
-# 
-# Top level modules:
-# 	decoder
-# End time: 23:55:12 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:12 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/program_counter.sv 
-# -- Compiling package program_counter_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module program_counter
-# 
-# Top level modules:
-# 	program_counter
-# End time: 23:55:12 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:12 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/instr_mem.sv 
-# -- Compiling module instr_mem
-# 
-# Top level modules:
-# 	instr_mem
-# End time: 23:55:12 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:12 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/ram.sv 
-# -- Compiling module ram
-# 
-# Top level modules:
-# 	ram
-# End time: 23:55:12 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:12 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/core.sv 
-# -- Compiling package core_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module core
-# 
-# Top level modules:
-# 	core
-# End time: 23:55:12 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:12 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/data_controller.sv 
-# -- Compiling module data_controller
-# ** Error: (vlog-13069) ../../hw/src/data_controller.sv(28): near ",": syntax error, unexpected ',', expecting '('.
-# End time: 23:55:12 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./run.do line 13
-# C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv ../../hw/src/data_controller.sv"
-do run.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work work 
-# Modifying modelsim.ini
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:22 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/riscv_pkg.svh 
-# -- Compiling package riscv_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:55:22 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:22 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/core_pkg.svh 
-# -- Compiling package core_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:55:22 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:22 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/alu.sv 
-# -- Compiling package alu_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 23:55:22 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:22 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/registers.sv 
-# -- Compiling module registers
-# 
-# Top level modules:
-# 	registers
-# End time: 23:55:22 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:22 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/decoder.sv 
-# -- Compiling package decoder_sv_unit
-# -- Importing package riscv_pkg
-# -- Importing package core_pkg
-# -- Compiling module decoder
-# 
-# Top level modules:
-# 	decoder
-# End time: 23:55:22 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:22 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/program_counter.sv 
-# -- Compiling package program_counter_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module program_counter
-# 
-# Top level modules:
-# 	program_counter
-# End time: 23:55:22 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:22 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/instr_mem.sv 
-# -- Compiling module instr_mem
-# 
-# Top level modules:
-# 	instr_mem
-# End time: 23:55:22 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:22 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/ram.sv 
-# -- Compiling module ram
-# 
-# Top level modules:
-# 	ram
-# End time: 23:55:23 on Apr 28,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:23 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/core.sv 
-# -- Compiling package core_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module core
-# 
-# Top level modules:
-# 	core
-# End time: 23:55:23 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:23 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/data_controller.sv 
-# -- Compiling module data_controller
-# 
-# Top level modules:
-# 	data_controller
-# End time: 23:55:23 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:23 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/tb/tb_sys.sv 
-# ** Error: (vlog-13069) ../../hw/tb/tb_sys.sv(74): near ".": syntax error, unexpected '.', expecting ')'.
-# End time: 23:55:23 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./run.do line 15
-# C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv ../../hw/tb/tb_sys.sv"
-do run.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work work 
-# Modifying modelsim.ini
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:42 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/riscv_pkg.svh 
-# -- Compiling package riscv_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:55:42 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:42 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/core_pkg.svh 
-# -- Compiling package core_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:55:42 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:42 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/alu.sv 
-# -- Compiling package alu_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 23:55:42 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:42 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/registers.sv 
-# -- Compiling module registers
-# 
-# Top level modules:
-# 	registers
-# End time: 23:55:42 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:42 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/decoder.sv 
-# -- Compiling package decoder_sv_unit
-# -- Importing package riscv_pkg
-# -- Importing package core_pkg
-# -- Compiling module decoder
-# 
-# Top level modules:
-# 	decoder
-# End time: 23:55:42 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:42 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/program_counter.sv 
-# -- Compiling package program_counter_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module program_counter
-# 
-# Top level modules:
-# 	program_counter
-# End time: 23:55:42 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:42 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/instr_mem.sv 
-# -- Compiling module instr_mem
-# 
-# Top level modules:
-# 	instr_mem
-# End time: 23:55:42 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:42 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/ram.sv 
-# -- Compiling module ram
-# 
-# Top level modules:
-# 	ram
-# End time: 23:55:42 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:42 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/core.sv 
-# -- Compiling package core_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module core
-# 
-# Top level modules:
-# 	core
-# End time: 23:55:42 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:43 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/data_controller.sv 
-# -- Compiling module data_controller
-# 
-# Top level modules:
-# 	data_controller
-# End time: 23:55:43 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:55:43 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/tb/tb_sys.sv 
-# -- Compiling package tb_sys_sv_unit
-# -- Importing package core_pkg
-# -- Importing package riscv_pkg
-# -- Compiling module tb_sys
-# 
-# Top level modules:
-# 	tb_sys
-# End time: 23:55:43 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 23:55:46 on Apr 28,2026, Elapsed time: 0:08:52
-# Errors: 30, Warnings: 2
-# vsim -voptargs=""+acc"" work.tb_sys 
-# Start time: 23:55:46 on Apr 28,2026
-# Loading sv_std.std
-# Loading work.riscv_pkg
-# Loading work.core_pkg
-# Loading work.tb_sys_sv_unit
-# Loading work.tb_sys
-# Loading work.core_sv_unit
-# Loading work.core
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.registers
-# Loading work.decoder_sv_unit
-# Loading work.decoder
-# Loading work.program_counter_sv_unit
-# Loading work.program_counter
-# Loading work.data_controller
-# Loading work.instr_mem
-# Loading work.ram
-# ** Error: (vsim-3033) ../../hw/tb/tb_sys.sv(106): Instantiation of 'uart' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_sys File: ../../hw/tb/tb_sys.sv
-#         Searched libraries:
-#             C:/Storage/Dron/UAV_SoC/rv_core/target/sim/work
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./run.do PAUSED at line 17
-do run.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work work 
-# Modifying modelsim.ini
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:22 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/riscv_pkg.svh 
-# -- Compiling package riscv_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:56:22 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:22 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/core_pkg.svh 
-# -- Compiling package core_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:56:22 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:22 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/alu.sv 
-# -- Compiling package alu_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 23:56:23 on Apr 28,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:23 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/registers.sv 
-# -- Compiling module registers
-# 
-# Top level modules:
-# 	registers
-# End time: 23:56:23 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:23 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/decoder.sv 
-# -- Compiling package decoder_sv_unit
-# -- Importing package riscv_pkg
-# -- Importing package core_pkg
-# -- Compiling module decoder
-# 
-# Top level modules:
-# 	decoder
-# End time: 23:56:23 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:23 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/program_counter.sv 
-# -- Compiling package program_counter_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module program_counter
-# 
-# Top level modules:
-# 	program_counter
-# End time: 23:56:23 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:23 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/instr_mem.sv 
-# -- Compiling module instr_mem
-# 
-# Top level modules:
-# 	instr_mem
-# End time: 23:56:23 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:23 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/ram.sv 
-# -- Compiling module ram
-# 
-# Top level modules:
-# 	ram
-# End time: 23:56:23 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:23 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/core.sv 
-# -- Compiling package core_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module core
-# 
-# Top level modules:
-# 	core
-# End time: 23:56:23 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:23 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/data_controller.sv 
-# -- Compiling module data_controller
-# 
-# Top level modules:
-# 	data_controller
-# End time: 23:56:23 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:23 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../../utils/uart/uart.sv 
-# -- Compiling module uart
-# ** Error: ../../../utils/uart/uart.sv(41): (vlog-2730) Undefined variable: 'r_valid_o'.
-# ** Error: ../../../utils/uart/uart.sv(45): (vlog-2730) Undefined variable: 'r_valid_o'.
-# End time: 23:56:23 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# ** Error: C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./run.do line 14
-# C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv ../../../utils/uart/uart.sv"
-do run.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work work 
-# Modifying modelsim.ini
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:37 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/riscv_pkg.svh 
-# -- Compiling package riscv_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:56:37 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:37 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/core_pkg.svh 
-# -- Compiling package core_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:56:37 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:37 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/alu.sv 
-# -- Compiling package alu_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 23:56:37 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:37 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/registers.sv 
-# -- Compiling module registers
-# 
-# Top level modules:
-# 	registers
-# End time: 23:56:37 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:37 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/decoder.sv 
-# -- Compiling package decoder_sv_unit
-# -- Importing package riscv_pkg
-# -- Importing package core_pkg
-# -- Compiling module decoder
-# 
-# Top level modules:
-# 	decoder
-# End time: 23:56:38 on Apr 28,2026, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:38 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/program_counter.sv 
-# -- Compiling package program_counter_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module program_counter
-# 
-# Top level modules:
-# 	program_counter
-# End time: 23:56:38 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:38 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/instr_mem.sv 
-# -- Compiling module instr_mem
-# 
-# Top level modules:
-# 	instr_mem
-# End time: 23:56:38 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:38 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/ram.sv 
-# -- Compiling module ram
-# 
-# Top level modules:
-# 	ram
-# End time: 23:56:38 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:38 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/core.sv 
-# -- Compiling package core_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module core
-# 
-# Top level modules:
-# 	core
-# End time: 23:56:38 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:38 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/data_controller.sv 
-# -- Compiling module data_controller
-# 
-# Top level modules:
-# 	data_controller
-# End time: 23:56:38 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:38 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../../utils/uart/uart.sv 
-# -- Compiling module uart
-# ** Error: ../../../utils/uart/uart.sv(40): (vlog-2110) Illegal reference to net "data_r_o".
-# ** Error: ../../../utils/uart/uart.sv(41): (vlog-2110) Illegal reference to net "r_valid_o".
-# ** Error: ../../../utils/uart/uart.sv(44): (vlog-2110) Illegal reference to net "data_r_o".
-# ** Error: ../../../utils/uart/uart.sv(45): (vlog-2110) Illegal reference to net "r_valid_o".
-# ** Error: ../../../utils/uart/uart.sv(52): (vlog-2110) Illegal reference to net "data_r_o".
-# ** Error: ../../../utils/uart/uart.sv(53): (vlog-2110) Illegal reference to net "r_valid_o".
-# ** Error: ../../../utils/uart/uart.sv(59): (vlog-2110) Illegal reference to net "data_r_o".
-# ** Error: ../../../utils/uart/uart.sv(60): (vlog-2110) Illegal reference to net "r_valid_o".
-# ** Error: ../../../utils/uart/uart.sv(67): (vlog-2110) Illegal reference to net "data_r_o".
-# ** Error: ../../../utils/uart/uart.sv(68): (vlog-2110) Illegal reference to net "r_valid_o".
-# End time: 23:56:38 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 10, Warnings: 0
-# ** Error: C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./run.do line 14
-# C:/Storage/ModelSim/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv ../../../utils/uart/uart.sv"
-do run.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work work 
-# Modifying modelsim.ini
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:58 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/riscv_pkg.svh 
-# -- Compiling package riscv_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:56:58 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:59 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/pkg/core_pkg.svh 
-# -- Compiling package core_pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 23:56:59 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:59 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/alu.sv 
-# -- Compiling package alu_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 23:56:59 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:59 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/registers.sv 
-# -- Compiling module registers
-# 
-# Top level modules:
-# 	registers
-# End time: 23:56:59 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:59 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/decoder.sv 
-# -- Compiling package decoder_sv_unit
-# -- Importing package riscv_pkg
-# -- Importing package core_pkg
-# -- Compiling module decoder
-# 
-# Top level modules:
-# 	decoder
-# End time: 23:56:59 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:59 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/program_counter.sv 
-# -- Compiling package program_counter_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module program_counter
-# 
-# Top level modules:
-# 	program_counter
-# End time: 23:56:59 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:59 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/instr_mem.sv 
-# -- Compiling module instr_mem
-# 
-# Top level modules:
-# 	instr_mem
-# End time: 23:56:59 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:59 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/ram.sv 
-# -- Compiling module ram
-# 
-# Top level modules:
-# 	ram
-# End time: 23:56:59 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:59 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/core.sv 
-# -- Compiling package core_sv_unit
-# -- Importing package core_pkg
-# -- Compiling module core
-# 
-# Top level modules:
-# 	core
-# End time: 23:56:59 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:59 on Apr 28,2026
-# vlog -reportprogress 300 -sv ../../hw/src/data_controller.sv 
-# -- Compiling module data_controller
-# 
-# Top level modules:
-# 	data_controller
-# End time: 23:56:59 on Apr 28,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:59 on Apr 28,2026
+# Start time: 18:34:59 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../../utils/uart/uart.sv 
 # -- Compiling module uart
 # 
 # Top level modules:
 # 	uart
-# End time: 23:56:59 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:34:59 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:56:59 on Apr 28,2026
+# Start time: 18:34:59 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/tb/tb_sys.sv 
 # -- Compiling package tb_sys_sv_unit
 # -- Importing package core_pkg
@@ -1206,10 +122,10 @@ do run.do
 # 
 # Top level modules:
 # 	tb_sys
-# End time: 23:56:59 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:34:59 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" work.tb_sys 
-# Start time: 23:55:46 on Apr 28,2026
+# Start time: 18:35:01 on Apr 29,2026
 # Loading sv_std.std
 # Loading work.riscv_pkg
 # Loading work.core_pkg
@@ -1228,11 +144,6 @@ do run.do
 # Loading work.instr_mem
 # Loading work.ram
 # Loading work.uart
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: ndomingu  Hostname: BSC-8488104232  ProcessID: 11460
-#           Attempting to use alternate WLF file "./wlftagi3nv".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftagi3nv
 # ** Note: $finish    : ../../hw/tb/tb_sys.sv(134)
 #    Time: 2605 ps  Iteration: 1  Instance: /tb_sys
 # 1
@@ -1243,25 +154,25 @@ do run.do
 # vmap work work 
 # Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:57:56 on Apr 28,2026
+# Start time: 18:41:34 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/pkg/riscv_pkg.svh 
 # -- Compiling package riscv_pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 23:57:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:41:34 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:57:56 on Apr 28,2026
+# Start time: 18:41:34 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/pkg/core_pkg.svh 
 # -- Compiling package core_pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 23:57:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:41:34 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:57:56 on Apr 28,2026
+# Start time: 18:41:34 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/alu.sv 
 # -- Compiling package alu_sv_unit
 # -- Importing package core_pkg
@@ -1269,19 +180,19 @@ do run.do
 # 
 # Top level modules:
 # 	alu
-# End time: 23:57:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:41:34 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:57:56 on Apr 28,2026
+# Start time: 18:41:34 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/registers.sv 
 # -- Compiling module registers
 # 
 # Top level modules:
 # 	registers
-# End time: 23:57:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:41:35 on Apr 29,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:57:56 on Apr 28,2026
+# Start time: 18:41:35 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/decoder.sv 
 # -- Compiling package decoder_sv_unit
 # -- Importing package riscv_pkg
@@ -1290,10 +201,10 @@ do run.do
 # 
 # Top level modules:
 # 	decoder
-# End time: 23:57:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:41:35 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:57:56 on Apr 28,2026
+# Start time: 18:41:35 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/program_counter.sv 
 # -- Compiling package program_counter_sv_unit
 # -- Importing package core_pkg
@@ -1301,28 +212,28 @@ do run.do
 # 
 # Top level modules:
 # 	program_counter
-# End time: 23:57:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:41:35 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:57:56 on Apr 28,2026
+# Start time: 18:41:35 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/instr_mem.sv 
 # -- Compiling module instr_mem
 # 
 # Top level modules:
 # 	instr_mem
-# End time: 23:57:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:41:35 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:57:56 on Apr 28,2026
+# Start time: 18:41:35 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/ram.sv 
 # -- Compiling module ram
 # 
 # Top level modules:
 # 	ram
-# End time: 23:57:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:41:35 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:57:56 on Apr 28,2026
+# Start time: 18:41:35 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/core.sv 
 # -- Compiling package core_sv_unit
 # -- Importing package core_pkg
@@ -1330,28 +241,28 @@ do run.do
 # 
 # Top level modules:
 # 	core
-# End time: 23:57:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:41:35 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:57:56 on Apr 28,2026
+# Start time: 18:41:35 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/data_controller.sv 
 # -- Compiling module data_controller
 # 
 # Top level modules:
 # 	data_controller
-# End time: 23:57:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:41:35 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:57:56 on Apr 28,2026
+# Start time: 18:41:35 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../../utils/uart/uart.sv 
 # -- Compiling module uart
 # 
 # Top level modules:
 # 	uart
-# End time: 23:57:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:41:35 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:57:56 on Apr 28,2026
+# Start time: 18:41:35 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/tb/tb_sys.sv 
 # -- Compiling package tb_sys_sv_unit
 # -- Importing package core_pkg
@@ -1360,12 +271,12 @@ do run.do
 # 
 # Top level modules:
 # 	tb_sys
-# End time: 23:57:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:41:35 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 23:57:59 on Apr 28,2026, Elapsed time: 0:02:13
-# Errors: 1, Warnings: 2
+# End time: 18:41:39 on Apr 29,2026, Elapsed time: 0:06:38
+# Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" work.tb_sys 
-# Start time: 23:57:59 on Apr 28,2026
+# Start time: 18:41:39 on Apr 29,2026
 # Loading sv_std.std
 # Loading work.riscv_pkg
 # Loading work.core_pkg
@@ -1384,11 +295,7 @@ do run.do
 # Loading work.instr_mem
 # Loading work.ram
 # Loading work.uart
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: ndomingu  Hostname: BSC-8488104232  ProcessID: 11460
-#           Attempting to use alternate WLF file "./wlftv135a7".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftv135a7
+# Hello World
 # ** Note: $finish    : ../../hw/tb/tb_sys.sv(134)
 #    Time: 2605 ps  Iteration: 1  Instance: /tb_sys
 # 1
@@ -1399,25 +306,25 @@ do run.do
 # vmap work work 
 # Modifying modelsim.ini
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:58:55 on Apr 28,2026
+# Start time: 18:42:44 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/pkg/riscv_pkg.svh 
 # -- Compiling package riscv_pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 23:58:55 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:42:44 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:58:55 on Apr 28,2026
+# Start time: 18:42:44 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/pkg/core_pkg.svh 
 # -- Compiling package core_pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 23:58:55 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:42:44 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:58:55 on Apr 28,2026
+# Start time: 18:42:44 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/alu.sv 
 # -- Compiling package alu_sv_unit
 # -- Importing package core_pkg
@@ -1425,19 +332,19 @@ do run.do
 # 
 # Top level modules:
 # 	alu
-# End time: 23:58:55 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:42:45 on Apr 29,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:58:55 on Apr 28,2026
+# Start time: 18:42:45 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/registers.sv 
 # -- Compiling module registers
 # 
 # Top level modules:
 # 	registers
-# End time: 23:58:55 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:42:45 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:58:55 on Apr 28,2026
+# Start time: 18:42:45 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/decoder.sv 
 # -- Compiling package decoder_sv_unit
 # -- Importing package riscv_pkg
@@ -1446,10 +353,10 @@ do run.do
 # 
 # Top level modules:
 # 	decoder
-# End time: 23:58:55 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:42:45 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:58:55 on Apr 28,2026
+# Start time: 18:42:45 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/program_counter.sv 
 # -- Compiling package program_counter_sv_unit
 # -- Importing package core_pkg
@@ -1457,28 +364,28 @@ do run.do
 # 
 # Top level modules:
 # 	program_counter
-# End time: 23:58:55 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:42:45 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:58:55 on Apr 28,2026
+# Start time: 18:42:45 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/instr_mem.sv 
 # -- Compiling module instr_mem
 # 
 # Top level modules:
 # 	instr_mem
-# End time: 23:58:55 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:42:45 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:58:55 on Apr 28,2026
+# Start time: 18:42:45 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/ram.sv 
 # -- Compiling module ram
 # 
 # Top level modules:
 # 	ram
-# End time: 23:58:55 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:42:45 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:58:55 on Apr 28,2026
+# Start time: 18:42:45 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/core.sv 
 # -- Compiling package core_sv_unit
 # -- Importing package core_pkg
@@ -1486,28 +393,28 @@ do run.do
 # 
 # Top level modules:
 # 	core
-# End time: 23:58:55 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:42:45 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:58:56 on Apr 28,2026
+# Start time: 18:42:45 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/src/data_controller.sv 
 # -- Compiling module data_controller
 # 
 # Top level modules:
 # 	data_controller
-# End time: 23:58:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:42:45 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:58:56 on Apr 28,2026
+# Start time: 18:42:45 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../../utils/uart/uart.sv 
 # -- Compiling module uart
 # 
 # Top level modules:
 # 	uart
-# End time: 23:58:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:42:45 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:58:56 on Apr 28,2026
+# Start time: 18:42:45 on Apr 29,2026
 # vlog -reportprogress 300 -sv ../../hw/tb/tb_sys.sv 
 # -- Compiling package tb_sys_sv_unit
 # -- Importing package core_pkg
@@ -1516,12 +423,12 @@ do run.do
 # 
 # Top level modules:
 # 	tb_sys
-# End time: 23:58:56 on Apr 28,2026, Elapsed time: 0:00:00
+# End time: 18:42:45 on Apr 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 23:58:58 on Apr 28,2026, Elapsed time: 0:00:59
-# Errors: 0, Warnings: 2
+# End time: 18:42:49 on Apr 29,2026, Elapsed time: 0:01:10
+# Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" work.tb_sys 
-# Start time: 23:58:58 on Apr 28,2026
+# Start time: 18:42:49 on Apr 29,2026
 # Loading sv_std.std
 # Loading work.riscv_pkg
 # Loading work.core_pkg
@@ -1540,14 +447,13 @@ do run.do
 # Loading work.instr_mem
 # Loading work.ram
 # Loading work.uart
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: ndomingu  Hostname: BSC-8488104232  ProcessID: 11460
-#           Attempting to use alternate WLF file "./wlftshcb94".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftshcb94
+# 
+# 
+# Hello World
+# 
 # ** Note: $finish    : ../../hw/tb/tb_sys.sv(134)
 #    Time: 2605 ps  Iteration: 1  Instance: /tb_sys
 # 1
 # Break in Module tb_sys at ../../hw/tb/tb_sys.sv line 134
-# End time: 00:04:17 on Apr 29,2026, Elapsed time: 0:05:19
-# Errors: 0, Warnings: 2
+# End time: 18:54:22 on Apr 29,2026, Elapsed time: 0:11:33
+# Errors: 0, Warnings: 0

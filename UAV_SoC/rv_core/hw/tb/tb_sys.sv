@@ -134,4 +134,11 @@ module tb_sys;
         $finish;
     end
 
+
+    always @(posedge clk) begin
+        if(we_x && (addr_x == 32'h70000000)) begin
+            $write("%c", data_wx);
+        end
+    end
+
 endmodule

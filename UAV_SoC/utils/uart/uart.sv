@@ -75,12 +75,12 @@ module uart #(
 
     logic [7:0] data_tx;
     assign data_tx = data;
-/*
+
     uart_tx i_uart_tx (
         .clk_i (clk_i),
         .rst_ni (rst_ni),
         .data_tx_i (data_tx),
         .prescale_i (baudrate)
-    );*/
+    );
 
 endmodule
